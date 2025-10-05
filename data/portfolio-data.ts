@@ -83,7 +83,7 @@ export const portfolioData = {
             details: "A Next.js based fullstack movie app.",
             stack: ["Next.js", "TypeScript"],
             repo: "https://github.com/druxvh/brokebros",
-            demo: "https:brokebros.vercel.app",
+            demo: "https://brokebros.vercel.app",
             featured: false,
             image: {
                 src: "/project/brokebros.jpg",
