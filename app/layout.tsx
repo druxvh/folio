@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,15 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+
+          {/* <!-- Cloudflare Web Analytics --> */}
+          <Script
+            defer
+            src='https://static.cloudflareinsights.com/beacon.min.js'
+            data-cf-beacon='{"token": "9ebb749b9d87491b880e9511efdf6d67"}'
+          />
+
+          {/* <!-- Vercel Web Analytics --> */}
           <Analytics />
         </ThemeProvider>
       </body>
