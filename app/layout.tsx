@@ -42,7 +42,7 @@ export default function RootLayout({
           <Script
             defer
             src='https://static.cloudflareinsights.com/beacon.min.js'
-            data-cf-beacon='{"token": "9ebb749b9d87491b880e9511efdf6d67"}'
+            data-cf-beacon='{"token": "9ebb749b9d87491b880e9511efdf6d67", "spa": true}'
           />
 
           {/* <!-- Vercel Web Analytics --> */}
