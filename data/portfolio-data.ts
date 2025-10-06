@@ -1,6 +1,7 @@
+import { PortfolioType } from "@/types";
 import { CertificateIcon, EnvelopeSimpleIcon, MapPinIcon } from "@phosphor-icons/react";
 
-export const portfolioData = {
+export const portfolioData: PortfolioType = {
     name: "Druavh Mahajan",
     displayName: "Druavh",
     title: "Web developer — minimal, pragmatic, build-by-doing",
@@ -57,7 +58,6 @@ export const portfolioData = {
             degree: "BCA",
             school: "Manipal University Jaipur (DOE)",
             duration: "2021 – 2025",
-            note: "Final year student"
         }
     ],
 
@@ -65,7 +65,7 @@ export const portfolioData = {
         {
             id: "quick-forms",
             title: "quick-forms",
-            short: "Small, fast form builder / utility for quickly generating forms.",
+            short: "Drag-and-drop form builder with validation, reusable components, and multi-field support.",
             details: "A lightweight (TypeScript) forms project—fast prototyping with reusable inputs.",
             stack: ["TypeScript", "React"],
             repo: "https://github.com/druxvh/quick-forms",
@@ -79,7 +79,7 @@ export const portfolioData = {
         {
             id: "brokebros",
             title: "brokebros",
-            short: "Fullstack Next.js app (movie / tv-show app).",
+            short: "Streaming-style app for exploring trending, top-rated, and regional movies & shows.",
             details: "A Next.js based fullstack movie app.",
             stack: ["Next.js", "TypeScript"],
             repo: "https://github.com/druxvh/brokebros",
@@ -93,7 +93,7 @@ export const portfolioData = {
         {
             id: "ai-summarizer",
             title: "quick summarizer",
-            short: "AI-based notes summarizer that turns long-form notes into quick concise points (streaming UI).",
+            short: "AI-powered summarizer converting long notes into clean, structured colorful bullet points.",
             details: "Next.js app using AI tools for streaming summaries and a minimal colorful card UI.",
             stack: ["Next.js", "TypeScript", "ShadCN UI", "Gemini"],
             repo: "https://github.com/druxvh/ai-summarizer",
@@ -126,8 +126,5 @@ export const portfolioData = {
         "Open-source projects: quick-forms, ai-summarizer, brokebros, quick-2-do"
     ],
 
-    writing: [
-        // keep these as placeholders or populate with actual article slugs
-        // { title: "How I improved onboarding with tiny defaults", link: "/blog/onboarding-defaults", date: "2025-06-01" }
-    ],
+    writing: [],
 };

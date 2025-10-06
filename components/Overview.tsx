@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import HorizontalLine from "./general/horizontal-line"
+import HorizontalLine from "./ui/horizontal-line"
 import Header from "./Header"
 import { portfolioData } from "@/data/portfolio-data"
 import { ArrowUpRightIcon } from "@phosphor-icons/react"
@@ -46,7 +46,6 @@ export default function Overview() {
                         <Link href={portfolioData.socials["x"].href} target="_blank" className="underline hover:text-[#b5e48c]/90">thoughts</Link>
                         <Link href={'/resume.pdf'} target="_blank" className="underline hover:text-[#b5e48c]/90">
                             <span className="flex items-center">
-
                                 resume <ArrowUpRightIcon size={16} />
                             </span>
                         </Link>

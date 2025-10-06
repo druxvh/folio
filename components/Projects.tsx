@@ -1,39 +1,26 @@
 'use client'
 
 import Link from "next/link"
-import HorizontalLine from "./general/horizontal-line"
+import HorizontalLine from "./ui/horizontal-line"
 import { useState } from "react";
 import clsx from "clsx";
 import { ArrowSquareOutIcon, GlobeSimpleIcon, ListDashesIcon, SquaresFourIcon } from "@phosphor-icons/react";
 import { portfolioData } from "@/data/portfolio-data";
 import Image from "next/image";
+import type { Project } from "@/types";
 
-type ProjectType = {
-    id: string;
-    title: string;
-    short: string;
-    details: string;
-    stack: string[];
-    repo: string;
-    demo?: string;
-    featured?: boolean;
-    image?: {
-        src: string;
-        alt: string;
-    };
-}
 
 export default function Projects() {
     const [columnSwitch, setColumnSwitch] = useState<boolean>(false);
 
-    const openProject = (project: ProjectType) => {
+    const openProject = (project: Project) => {
         // prefer demo, fallback to repo, otherwise do nothing
         const url = project.demo || project.repo;
         if (!url) return;
         window.open(url, "_blank", "noopener,noreferrer");
     };
 
-    const onKeyActivate = (e: React.KeyboardEvent, project: ProjectType) => {
+    const onKeyActivate = (e: React.KeyboardEvent, project: Project) => {
         if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             openProject(project);
@@ -71,7 +58,7 @@ export default function Projects() {
             <div className={clsx("grid grid-cols-1 gap-3 space-y-4 text-sm", {
                 "grid-cols-2": columnSwitch,
             })}>
-                {portfolioData.projects.map((project) => (
+                {portfolioData.projects.map((project: Project) => (
                     <div
                         key={project.id}
                         role="link"
