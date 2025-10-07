@@ -18,7 +18,33 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Druavh Mahajan",
   description: "drx - personal website",
+  keywords:
+    "Druavh, drx, Druavh Mahajan, dhruv mahajan, drx x, drx twitter",
+  authors: [{ name: "Druavh Mahajan" }],
+  openGraph: {
+    title: "Druavh Mahajan - Developer",
+    description:
+      "drx - personal website",
+    url: "https://druavh.me",
+    siteName: "druavh.me",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Druavh Mahajan",
+    description: "drx - personal website",
+    images: ["/og-image.png"],
+  },
 };
+
 
 export default function RootLayout({
   children,
