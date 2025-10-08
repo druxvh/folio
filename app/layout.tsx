@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "druavh.me",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://druavh.me/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Druavh Mahajan",
     description: "drx - personal website",
-    images: ["/og-image.png"],
+    images: ["https://druavh.me/og-image.png"],
   },
 };
 
