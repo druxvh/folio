@@ -37,18 +37,18 @@ export default function Projects() {
                         <button
                             onClick={() => setColumnSwitch(false)}
                             className={clsx("cursor-pointer", {
-                                "text-[#b5e48c]": columnSwitch === false,
+                                "text-accent-green": columnSwitch === false,
                             })}
                         >
-                            <ListDashesIcon size={20} className="hover:text-[#b5e48c]/90" />
+                            <ListDashesIcon size={20} className="hover:text-accent-green" />
                         </button>
                         <button
                             onClick={() => setColumnSwitch(true)}
                             className={clsx("cursor-pointer", {
-                                "text-[#b5e48c]": columnSwitch,
+                                "text-accent-green": columnSwitch,
                             })}
                         >
-                            <SquaresFourIcon size={20} className="hover:text-[#b5e48c]/90" />
+                            <SquaresFourIcon size={20} className="hover:text-accent-green" />
                         </button>
                     </div>
                 </div>
@@ -78,13 +78,13 @@ export default function Projects() {
                             className="w-full object-cover aspect-video h-fit rounded-sm mb-3 transition-transform duration-300 group-hover:scale-[1.02]"
                         />
                         <div className="flex items-center justify-between">
-                            <h2 className="text-foreground font-medium italic transition-transform duration-300 group-hover:text-[#b5e48c]/90 group-hover:underline">{project.title}</h2>
+                            <h2 className="text-foreground font-medium italic transition-transform duration-300 group-hover:text-accent-green group-hover:underline">{project.title}</h2>
                             <div className="flex items-center gap-2">
-                                <Link href={project.repo || "#"} target="_blank" className="text-muted-foreground hover:text-[#b5e48c]/90">
+                                <Link href={project.repo || "#"} target="_blank" className="text-muted-foreground hover:text-accent-green">
                                     <ArrowSquareOutIcon size={16} />
                                 </Link>
 
-                                <Link href={project.demo || "#"} target="_blank" className="text-muted-foreground hover:text-[#b5e48c]/90">
+                                <Link href={project.demo || "#"} target="_blank" className="text-muted-foreground hover:text-accent-green">
                                     <GlobeSimpleIcon size={16} />
                                 </Link>
                             </div>

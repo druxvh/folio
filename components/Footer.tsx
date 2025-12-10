@@ -12,7 +12,7 @@ export default function Footer() {
                 {Object.values(portfolioData.socials)
                     .slice(0, 4) // Limit to first 4 socials
                     .map(social => (
-                        <Link key={social.label} href={social.href || '#'} target="_blank" className='hover:underline hover:text-[#b5e48c]/90'>
+                        <Link key={social.label} href={social.href || '#'} target="_blank" className='hover:underline hover:text-accent-green'>
                             {capitalize(social.label)}
                         </Link>
                     ))}

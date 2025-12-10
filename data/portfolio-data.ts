@@ -63,17 +63,17 @@ export const portfolioData: PortfolioType = {
 
     projects: [
         {
-            id: "quick-forms",
-            title: "quick-forms",
+            id: "qforms",
+            title: "qforms",
             short: "Drag-and-drop form builder with validation, reusable components, and multi-field support.",
             details: "A lightweight (TypeScript) forms project—fast prototyping with reusable inputs.",
             stack: ["TypeScript", "React"],
             repo: "https://github.com/druxvh/quick-forms",
-            // demo: "https://github.com/druxvh/quick-forms",
+            demo: "https://qforms.in",
             featured: false,
             image: {
-                src: "/project/quick-forms.jpg",
-                alt: "Quick forms project",
+                src: "/project/qforms.jpg",
+                alt: "QForms project",
             }
         },
         {
@@ -123,7 +123,7 @@ export const portfolioData: PortfolioType = {
     highlights: [
         "Building small, production-ready web apps.",
         "Focus on minimal UI, pragmatic features and performance.",
-        "Open-source projects: quick-forms, ai-summarizer, brokebros, quick-2-do"
+        "Open-source projects: qforms, ai-summarizer, brokebros, quick-2-do"
     ],
 
     writing: [],

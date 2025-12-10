@@ -9,10 +9,10 @@ export default function Header() {
         <header className="flex justify-between items-center">
             <h1 className="font-semibold text-foreground text-xl">{portfolioData.displayName}</h1>
             <div className="flex gap-3">
-                <Link href={portfolioData.socials["x"].href} target="_blank" className="text-foreground/90 hover:text-[#b5e48c]">
+                <Link href={portfolioData.socials["x"].href} target="_blank" className="text-foreground/90 hover:text-accent-green">
                     <XLogoIcon size={21} />
                 </Link>
-                <Link href={portfolioData.socials["github"].href} target="_blank" className="text-foreground/90 hover:text-[#b5e48c]">
+                <Link href={portfolioData.socials["github"].href} target="_blank" className="text-foreground/90 hover:text-accent-green">
                     <GithubLogoIcon size={21} />
                 </Link>
             </div>
