@@ -56,7 +56,7 @@ export default function Overview() {
                     <nav className="w-full flex gap-3 text-muted-foreground text-sm">
                         <Link href={portfolioData.socials["medium"].href} target="_blank" className="underline hover:text-accent-green">blog</Link>
                         <Link href={portfolioData.socials["x"].href} target="_blank" className="underline hover:text-accent-green">thoughts</Link>
-                        <Link href={'/resume.pdf'} target="_blank" className="underline hover:text-accent-green">
+                        <Link href={'https://docs.google.com/document/d/1ez1vy6_mXmDwIGqmA85IX3B2BEr6ex0uyYQb5Lww4B4/edit?usp=sharing'} target="_blank" className="underline hover:text-accent-green">
                             <span className="flex items-center">
                                 resume <ArrowUpRightIcon size={16} />
                             </span>
