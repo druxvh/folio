@@ -12,7 +12,7 @@ export const portfolioData: PortfolioType = {
   title: "Web developer - minimal, pragmatic, build-by-doing",
   bio: "Hi, I'm Druavh Mahajan. I am a full-stack developer focused on minimal, high-performance web apps. I build with an open-source mindset, clean code, and a philosophy of learning by doing.",
   workbio:
-    "Currently, I am a Full-Stack Developer at XRise AI, an agency delivering custom AI solutions for enterprises. I bridge the gap between complex AI backend capabilities and intuitive, fast web interfaces.",
+    "Currently, I am a Full-Stack Developer at XRise AI, an agency delivering custom AI solutions for enterprises. I bridge the gap between AI backend capabilities and intuitive web interfaces.",
   projectbio:
     "On the side, I build practical tools. I created lazyman, an open-source remote PC controller for mobile, and I'm currently developing qforms which is a modern, seamless alternative to Google Forms for creators and small businesses.",
   contact: [
