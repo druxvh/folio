@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import HorizontalLine from "./ui/horizontal-line"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
 import { ArrowSquareOutIcon, GlobeSimpleIcon, ListDashesIcon, SquaresFourIcon } from "@phosphor-icons/react";
 import { portfolioData } from "@/data/portfolio-data";
@@ -12,6 +12,11 @@ import type { Project } from "@/types";
 
 export default function Projects() {
     const [columnSwitch, setColumnSwitch] = useState<boolean>(false);
+    const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
 
     const openProject = (project: Project) => {
         // prefer demo, fallback to repo, otherwise do nothing
@@ -36,27 +41,29 @@ export default function Projects() {
                     <div className="flex items-center gap-2">
                         <button
                             onClick={() => setColumnSwitch(false)}
-                            className={clsx("cursor-pointer", {
+                            className={clsx("cursor-pointer transition-all duration-300 ease-out", {
                                 "text-accent-green": columnSwitch === false,
                             })}
                         >
-                            <ListDashesIcon size={20} className="hover:text-accent-green" />
+                            <ListDashesIcon size={20} className="hover:text-accent-green transition-colors" />
                         </button>
                         <button
                             onClick={() => setColumnSwitch(true)}
-                            className={clsx("cursor-pointer", {
+                            className={clsx("cursor-pointer transition-all duration-300 ease-out", {
                                 "text-accent-green": columnSwitch,
                             })}
                         >
-                            <SquaresFourIcon size={20} className="hover:text-accent-green" />
+                            <SquaresFourIcon size={20} className="hover:text-accent-green transition-colors" />
                         </button>
                     </div>
                 </div>
                 <HorizontalLine />
             </div>
 
-            <div className={clsx("grid grid-cols-1 gap-3 space-y-4 text-sm", {
+            <div className={clsx("grid grid-cols-1 gap-3 space-y-4 text-sm transition-all duration-500 ease-out", {
                 "grid-cols-2": columnSwitch,
+                "opacity-0 translate-y-4": !isLoaded,
+                "opacity-100 translate-y-0": isLoaded,
             })}>
                 {portfolioData.projects.map((project: Project) => (
                     <div

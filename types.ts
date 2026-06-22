@@ -44,8 +44,9 @@ export type PortfolioType = {
     name: string;
     displayName: string;
     title: string;
-    shortTagline: string;
     bio: string;
+    workbio: string;
+    projectbio: string;
 
     contact: ContactItem[]
 
