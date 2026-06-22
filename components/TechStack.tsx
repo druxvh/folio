@@ -19,9 +19,9 @@ export default function TechStack() {
 
   return (
     <section className="flex flex-col gap-4">
-      <div className="grid grid-cols-1 gap-2">
+      <div className="grid grid-cols-1 gap-1">
         {Object.entries(skills).map(([category, items]) => (
-          <div key={category} className="flex gap-4 flex-wrap items-start ">
+          <div key={category} className="flex gap-4 flex-wrap items-center h-full">
             <h3 className="font-semibold text-foreground text-sm ">
               {category}
             </h3>{" "}
@@ -29,7 +29,7 @@ export default function TechStack() {
               {items.map((item) => (
                 <span
                   key={item}
-                  className="text-xs text-accent-green hover:text-accent-green/90 transition-colors "
+                  className="text-sm text-accent-green hover:text-accent-green/90 transition-colors "
                 >
                   {item}
                 </span>
