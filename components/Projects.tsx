@@ -72,7 +72,7 @@ export default function Projects() {
                         tabIndex={0}
                         onClick={() => openProject(project)}
                         onKeyDown={(e) => onKeyActivate(e, project)}
-                        className="group w-full h-full rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b5e48c]/30 cursor-pointer"
+                        className="group w-full h-full rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-green/30 cursor-pointer"
                         aria-label={`Open ${project.title}`}
                     >
                         <Image

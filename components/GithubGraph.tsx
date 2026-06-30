@@ -15,8 +15,8 @@ export default function GithubGraph() {
                 colorScheme={resolvedTheme === 'light' ? 'light' : 'dark'}
                 transformData={data => data.filter(x => x.count > 0)}
                 theme={{
-                    light: ['#bfc9b7', '#477222'],
-                    dark: ['#222', '#b5e48c'],
+                    light: ['#1a3a2a', '#a3e635'],
+                    dark: ['#0f1a0f', '#a3e635'],
                 }}
             />
         </section>
