@@ -1,24 +1,27 @@
-'use client'
+"use client";
 
-import { useTheme } from "next-themes"
-import GitHubCalendar from "react-github-calendar"
+import { motion } from "motion/react"
+import GitHubCalendar from "react-github-calendar";
 
 export default function GithubGraph() {
-    const { resolvedTheme } = useTheme()
-    return (
-        <section className="lg:py-2 react-github-calendar">
-            <GitHubCalendar
-                username="druxvh"
-                blockSize={8}
-                fontSize={10}
-                blockRadius={10}
-                colorScheme={resolvedTheme === 'light' ? 'light' : 'dark'}
-                transformData={data => data.filter(x => x.count > 0)}
-                theme={{
-                    light: ['#1a3a2a', '#a3e635'],
-                    dark: ['#0f1a0f', '#a3e635'],
-                }}
-            />
-        </section>
-    )
+  return (
+    <motion.section
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.3, delay: 1.9 }}
+      className="lg:py-2 react-github-calendar"
+    >
+      <GitHubCalendar
+        username="druxvh"
+        blockSize={8}
+        fontSize={10}
+        blockRadius={10}
+        colorScheme={"dark"}
+        transformData={(data) => data.filter((x) => x.count > 0)}
+        theme={{
+          dark: ["#222", "#b5e48c"],
+        }}
+      />
+    </motion.section>
+  );
 }

@@ -1,5 +1,7 @@
 'use client'
 
+import { motion } from "motion/react"
+import { TextAnimate } from "@/registry/magicui/text-animate";
 import Link from "next/link"
 import HorizontalLine from "./ui/horizontal-line"
 import { useState, useEffect } from "react";
@@ -19,7 +21,6 @@ export default function Projects() {
     }, []);
 
     const openProject = (project: Project) => {
-        // prefer demo, fallback to repo, otherwise do nothing
         const url = project.demo || project.repo;
         if (!url) return;
         window.open(url, "_blank", "noopener,noreferrer");
@@ -37,8 +38,15 @@ export default function Projects() {
             <div>
                 <HorizontalLine />
                 <div className="flex items-center justify-between">
-                    <h2 className="py-4">Projects</h2>
-                    <div className="flex items-center gap-2">
+                    <TextAnimate animation="blurIn" startOnView={false} as="h2" delay={2.2} duration={2} className="py-4">
+                      Projects
+                    </TextAnimate>
+                    <motion.div
+                        initial={{ opacity: 0, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, filter: "blur(0px)" }}
+                        transition={{ duration: 0.3, delay: 2.2 }}
+                        className="flex items-center gap-2"
+                    >
                         <button
                             onClick={() => setColumnSwitch(false)}
                             className={clsx("cursor-pointer transition-all duration-300 ease-out", {
@@ -55,7 +63,7 @@ export default function Projects() {
                         >
                             <SquaresFourIcon size={20} className="hover:text-accent-green transition-colors" />
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
                 <HorizontalLine />
             </div>
@@ -85,8 +93,15 @@ export default function Projects() {
                             className="w-full object-cover aspect-video h-fit rounded-sm mb-3 transition-transform duration-300 group-hover:scale-[1.02]"
                         />
                         <div className="flex items-center justify-between">
-                            <h2 className="text-foreground font-medium italic transition-transform duration-300 group-hover:text-accent-green group-hover:underline">{project.title}</h2>
-                            <div className="flex items-center gap-2">
+                            <TextAnimate animation="blurIn" startOnView={false} as="h2" delay={2.5} duration={2} className="text-foreground font-medium italic transition-transform duration-300 group-hover:text-accent-green group-hover:underline">
+                              {project.title}
+                            </TextAnimate>
+                            <motion.div
+                                initial={{ opacity: 0, filter: "blur(10px)" }}
+                                animate={{ opacity: 1, filter: "blur(0px)" }}
+                                transition={{ duration: 0.3, delay: 2.5 }}
+                                className="flex items-center gap-2"
+                            >
                                 <Link href={project.repo || "#"} target="_blank" className="text-muted-foreground hover:text-accent-green">
                                     <ArrowSquareOutIcon size={16} />
                                 </Link>
@@ -94,10 +109,12 @@ export default function Projects() {
                                 <Link href={project.demo || "#"} target="_blank" className="text-muted-foreground hover:text-accent-green">
                                     <GlobeSimpleIcon size={16} />
                                 </Link>
-                            </div>
+                            </motion.div>
 
                         </div>
-                        <p className="mt-2 text-foreground/90">{project.short}</p>
+                        <TextAnimate animation="blurIn" startOnView={false} as="p" delay={2.6} duration={2} className="mt-2 text-foreground/90">
+                          {project.short}
+                        </TextAnimate>
                     </div>
                 ))}
 

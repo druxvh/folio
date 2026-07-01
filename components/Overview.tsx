@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "motion/react"
+import { TextAnimate } from "@/registry/magicui/text-animate";
 import Link from "next/link";
 import HorizontalLine from "./ui/horizontal-line";
 import Header from "./Header";
@@ -24,18 +26,32 @@ export default function Overview() {
                   href={item.href}
                   className="flex items-center gap-2 text-muted-foreground"
                 >
-                  <item.icon size={18} />
-                  <p className="text-[15px] italic  hover:underline hover:text-accent-green">
+                  <motion.span
+                    initial={{ opacity: 0, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, filter: "blur(0px)" }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                  >
+                    <item.icon size={18} />
+                  </motion.span>
+                  <TextAnimate animation="blurIn" startOnView={false} as="p" delay={0.8} duration={2} className="text-[15px] italic  hover:underline hover:text-accent-green">
                     {item.label}
-                  </p>
+                  </TextAnimate>
                 </Link>
               ) : (
                 <span
                   key={index}
                   className="flex items-center gap-2 text-muted-foreground"
                 >
-                  <item.icon size={18} />
-                  <p className="text-[15px] italic">{item.label}</p>
+                  <motion.span
+                    initial={{ opacity: 0, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, filter: "blur(0px)" }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                  >
+                    <item.icon size={18} />
+                  </motion.span>
+                  <TextAnimate animation="blurIn" startOnView={false} as="p" delay={0.8} duration={2} className="text-[15px] italic">
+                    {item.label}
+                  </TextAnimate>
                 </span>
               ),
             )}
@@ -43,9 +59,15 @@ export default function Overview() {
 
           <TechStack />
 
-          <p className="text-foreground">{portfolioData.bio}</p>
-          <p className="text-foreground">{portfolioData.workbio}</p>
-          <p className="text-foreground">{portfolioData.projectbio}</p>
+          <TextAnimate animation="blurIn" startOnView={false} as="p" delay={1.3} duration={2} className="text-foreground">
+            {portfolioData.bio}
+          </TextAnimate>
+          <TextAnimate animation="blurIn" startOnView={false} as="p" delay={1.3} duration={2} className="text-foreground">
+            {portfolioData.workbio}
+          </TextAnimate>
+          <TextAnimate animation="blurIn" startOnView={false} as="p" delay={1.3} duration={2} className="text-foreground">
+            {portfolioData.projectbio}
+          </TextAnimate>
 
           <nav className="w-full flex gap-3 text-muted-foreground text-sm">
             <Link
@@ -53,14 +75,18 @@ export default function Overview() {
               target="_blank"
               className="underline hover:text-accent-green"
             >
-              blog
+              <TextAnimate animation="blurIn" startOnView={false} as="span" delay={1.6} duration={2}>
+                blog
+              </TextAnimate>
             </Link>
             <Link
               href={portfolioData.socials["x"].href}
               target="_blank"
               className="underline hover:text-accent-green"
             >
-              thoughts
+              <TextAnimate animation="blurIn" startOnView={false} as="span" delay={1.6} duration={2}>
+                thoughts
+              </TextAnimate>
             </Link>
             <Link
               href={
@@ -70,7 +96,16 @@ export default function Overview() {
               className="underline hover:text-accent-green"
             >
               <span className="flex items-center">
-                resume <ArrowUpRightIcon size={16} />
+                <TextAnimate animation="blurIn" startOnView={false} as="span" delay={1.6} duration={2}>
+                  resume
+                </TextAnimate>
+                <motion.span
+                  initial={{ opacity: 0, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, filter: "blur(0px)" }}
+                  transition={{ duration: 0.3, delay: 1.6 }}
+                >
+                  <ArrowUpRightIcon size={16} />
+                </motion.span>
               </span>
             </Link>
           </nav>
