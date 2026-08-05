@@ -10,11 +10,11 @@ export const portfolioData: PortfolioType = {
   name: "Druavh Mahajan",
   displayName: "Druavh",
   title: "Web developer - minimal, pragmatic, build-by-doing",
-  bio: "Hi, I'm Druavh Mahajan. I am a full-stack developer focused on minimal, high-performance web apps. I build with an open-source mindset, clean code, and a philosophy of learning by doing.",
+  bio: "Hi, I'm Druavh. I'm a full-stack developer focused on building fast, minimal web applications through clean code, and a philosophy of learning by doing.",
   workbio:
-    "At XRise AI, I build full stack software for various industries and enterprises. We create custom AI tools and workflows that cut manual work, lift productivity, and push revenue higher. I focus on making backend AI logic useful through ui interfaces teams actually want to use.",
+    "At XRise AI, I build full-stack enterprise software and custom AI workflows, bridging backend systems with intuitive user interfaces.",
   projectbio:
-    "On the side, I build practical tools. I created lazyman, an open-source remote PC controller for mobile, and I'm currently developing qforms which is a modern, seamless alternative to Google Forms for creators and small businesses.",
+    "On the side, I build practical tools. I created lazyman, an open-source mobile application for remote PC control, and I'm currently developing qforms, a streamlined alternative to Google Forms tailored for creators and small businesses.",
   contact: [
     {
       icon: MapPinIcon,

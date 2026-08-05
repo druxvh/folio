@@ -13,7 +13,7 @@ import type { Project } from "@/types";
 
 
 export default function Projects() {
-    const [columnSwitch, setColumnSwitch] = useState<boolean>(false);
+    const [columnSwitch, setColumnSwitch] = useState<boolean>(true);
     const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
     useEffect(() => {
